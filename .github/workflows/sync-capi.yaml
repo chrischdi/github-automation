@@ -3,6 +3,9 @@ on:
   schedule: 
     # Daily at 4:20 UTC
     - cron: '20 4 * * *'
+
+  workflow_dispatch: {}
+
 jobs:
   comment:
     runs-on: ubuntu-latest
