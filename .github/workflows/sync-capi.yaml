@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  comment:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - run: gh repo sync --branch main chrischdi/cluster-api --source kubernetes-sigs/cluster-api
