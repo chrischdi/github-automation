@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: gh repo sync --branch main chrischdi/cluster-api --source kubernetes-sigs/cluster-api
         env:
-          GH_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
       - run: gh repo sync --branch main chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
         env:
-          GH_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
