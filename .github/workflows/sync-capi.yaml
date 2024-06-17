@@ -13,6 +13,24 @@ jobs:
       - run: gh repo sync --branch main chrischdi/cluster-api --source kubernetes-sigs/cluster-api
         env:
           GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.7 chrischdi/cluster-api --source kubernetes-sigs/cluster-api
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.6 chrischdi/cluster-api --source kubernetes-sigs/cluster-api
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
       - run: gh repo sync --branch main chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.10 chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.9 chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.8 chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
+      - run: gh repo sync --branch release-1.7 chrischdi/cluster-api-provider-vsphere --source kubernetes-sigs/cluster-api-provider-vsphere
         env:
           GITHUB_TOKEN: ${{ secrets.SYNC_ACCESS_TOKEN }}
